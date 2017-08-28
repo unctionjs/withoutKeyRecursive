@@ -9,15 +9,15 @@ import isArray from "@unction/isarray"
 const isEitherObjectOrArray = either(isObject)(isArray)
 
 export default function withoutKeyRecursive (key: KeyType): Function {
-  return function withoutKeyRecursiveKey (original: IterableType): IterableType {
+  return function withoutKeyRecursiveKey (original: FunctorType): FunctorType {
     return reduceWithValueKey(
-      function withoutKeyRecursiveKeyIterable (accumulated: IterableType): Function {
+      function withoutKeyRecursiveKeyIterable (accumulated: FunctorType): Function {
         const accumulatedMerge = mergeRight(accumulated)
 
         return function withoutKeyRecursiveKeyIterableValue (current: any): Function {
           const isIterable = isEitherObjectOrArray(current)
 
-          return function withoutKeyRecursiveKeyIterableValueKey (index: KeyType): IterableType {
+          return function withoutKeyRecursiveKeyIterableValueKey (index: KeyType): FunctorType {
             if (key === index) {
               return accumulated
             }
