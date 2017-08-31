@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@unction/fresh": "3.0.0",
-    "@unction/isarray": "2.0.0",
+    "@unction/isarray": "2.1.0",
     "@unction/isobject": "2.0.0",
     "@unction/mergeright": "3.0.0",
     "@unction/recordfrom": "2.0.0",
