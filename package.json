@@ -53,9 +53,9 @@
     "@unction/fresh": "3.6.0",
     "@unction/isarray": "2.8.0",
     "@unction/isobject": "2.8.0",
-    "@unction/mergeright": "3.16.0",
-    "@unction/recordfrom": "2.16.0",
-    "@unction/reducewithvaluekey": "4.18.0",
+    "@unction/mergeright": "3.17.0",
+    "@unction/recordfrom": "2.17.0",
+    "@unction/reducewithvaluekey": "4.19.0",
     "ramda": "0.24.1"
   },
   "nyc": {
