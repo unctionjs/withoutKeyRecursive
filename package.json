@@ -54,7 +54,7 @@
     "@unction/isarray": "2.8.0",
     "@unction/isobject": "2.8.0",
     "@unction/mergeright": "3.31.0",
-    "@unction/recordfrom": "2.31.0",
+    "@unction/recordfrom": "2.32.0",
     "@unction/reducewithvaluekey": "4.32.0",
     "ramda": "0.24.1"
   },
