@@ -50,7 +50,7 @@
     "tap": "10.3.4"
   },
   "dependencies": {
-    "@unction/fresh": "3.6.0",
+    "@unction/fresh": "3.7.0",
     "@unction/isarray": "2.8.0",
     "@unction/isobject": "2.8.0",
     "@unction/mergeright": "3.31.0",
