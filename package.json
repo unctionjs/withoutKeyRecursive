@@ -51,11 +51,11 @@
   },
   "dependencies": {
     "@unction/fresh": "3.11.0",
-    "@unction/isarray": "2.14.0",
-    "@unction/isobject": "2.14.0",
+    "@unction/isarray": "2.15.0",
+    "@unction/isobject": "2.15.0",
     "@unction/mergeright": "3.36.0",
-    "@unction/recordfrom": "2.41.0",
-    "@unction/reducewithvaluekey": "4.38.0",
+    "@unction/recordfrom": "2.42.0",
+    "@unction/reducewithvaluekey": "4.40.0",
     "ramda": "0.24.1"
   },
   "nyc": {
