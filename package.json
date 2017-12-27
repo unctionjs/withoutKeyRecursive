@@ -52,12 +52,12 @@
     "tap": "11.0.0"
   },
   "dependencies": {
-    "@unction/fresh": "5.0.0",
-    "@unction/isarray": "3.0.0",
-    "@unction/isobject": "3.0.0",
-    "@unction/mergeright": "4.0.0",
-    "@unction/recordfrom": "3.0.0",
-    "@unction/reducewithvaluekey": "6.0.0",
+    "@unction/fresh": "6.0.0",
+    "@unction/isarray": "4.0.0",
+    "@unction/isobject": "4.0.0",
+    "@unction/mergeright": "5.0.0",
+    "@unction/recordfrom": "4.0.0",
+    "@unction/reducewithvaluekey": "7.0.0",
     "ramda": "0.24.1"
   },
   "nyc": {
