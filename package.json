@@ -1,6 +1,6 @@
 {
   "name": "@unction/withoutkeyrecursive",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Returns a copy of an iterable without a key, no matter how deep the tree",
   "keywords": [
     "unction",
