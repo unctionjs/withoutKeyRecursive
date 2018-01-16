@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> FunctorType -> FunctorType
+> KeyType => FunctorType => FunctorType
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
 
