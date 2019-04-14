@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-return-type */
-import {test} from "tap"
+import {test} from "tap";
 
-import withoutKeyRecursive from "./index"
+import withoutKeyRecursive from "./index";
 
 test(({same, end}) => {
   same(
@@ -27,7 +27,7 @@ test(({same, end}) => {
         namespace: "accounts",
       },
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
