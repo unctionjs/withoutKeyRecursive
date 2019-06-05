@@ -55,7 +55,7 @@
     "@unction/isarray": "5.2.0",
     "@unction/isobject": "6.1.0",
     "@unction/mergeright": "7.1.0",
-    "@unction/objectfrom": "1.0.0",
+    "@unction/objectfrom": "1.1.0",
     "@unction/reducewithvaluekey": "11.1.0"
   },
   "nyc": {
