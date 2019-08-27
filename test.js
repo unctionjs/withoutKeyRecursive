@@ -1,7 +1,7 @@
-/* eslint-disable flowtype/require-return-type */
+
 import {test} from "tap";
 
-import withoutKeyRecursive from "./index";
+import withoutKeyRecursive from "./";
 
 test(({same, end}) => {
   same(
