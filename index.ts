@@ -2,31 +2,30 @@ import fresh from "@unction/fresh";
 import mergeRight from "@unction/mergeright";
 import objectFrom from "@unction/objectfrom";
 import reduceWithValueKey from "@unction/reducewithvaluekey";
-import isObject from "@unction/isobject";
-import isArray from "@unction/isarray";
+import isType from "@unction/istype";
 
-const isEitherObjectOrArray = (value) => isObject(value) || isArray(value);
+import {RecordType} from "./types";
 
-export default function withoutKeyRecursive (key) {
-  return function withoutKeyRecursiveKey (original) {
-    return reduceWithValueKey((accumulated) => {
-      const accumulatedMerge = mergeRight(accumulated);
+export default function withoutKeyRecursive<A, B> (target: A) {
+  return function withoutKeyRecursiveKey (original: RecordType<A, B>): RecordType<A, B> {
+    return reduceWithValueKey(
+      (accumulated: RecordType<A, B>) =>
+        (current: B) =>
+          (key: A): RecordType<A, B> => {
+            if (target === key) {
+              return accumulated;
+            }
 
-      return function withoutKeyRecursiveKeyIterableValue (current) {
-        const isIterable = isEitherObjectOrArray(current);
+            if (isType("Object")(current) || isType("Array")(current) || isType("Map")(current)) {
+              return mergeRight(accumulated)(objectFrom([key])(withoutKeyRecursive(target)(current)));
+            }
 
-        return function withoutKeyRecursiveKeyIterableValueKey (index) {
-          if (key === index) {
-            return accumulated;
+            return mergeRight(accumulated)(objectFrom([key])(current));
           }
-
-          if (isIterable) {
-            return accumulatedMerge(objectFrom([index])(withoutKeyRecursive(key)(current)));
-          }
-
-          return accumulatedMerge(objectFrom([index])(current));
-        };
-      };
-    })(fresh(original))(original);
+    )(
+      fresh(original)
+    )(
+      original
+    );
   };
 }
