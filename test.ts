@@ -1,7 +1,7 @@
 
 import withoutKeyRecursive from "./index";
 
-test(() => {
+test("works", () => {
   expect(withoutKeyRecursive(
     "__abstraction__"
   )(
