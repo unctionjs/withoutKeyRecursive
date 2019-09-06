@@ -1,5 +1,5 @@
 
-import withoutKeyRecursive from "./index.ts";
+import withoutKeyRecursive from "./index";
 
 test(() => {
   expect(withoutKeyRecursive(
