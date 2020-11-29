@@ -4,14 +4,12 @@ import objectFrom from "@unction/objectfrom";
 import reduceWithValueKey from "@unction/reducewithvaluekey";
 import isType from "@unction/istype";
 
-import {RecordType} from "./types";
-
 export default function withoutKeyRecursive<A, B> (target: A) {
-  return function withoutKeyRecursiveKey (original: RecordType<A, B>): RecordType<A, B> {
+  return function withoutKeyRecursiveKey (original: Record<string | number | symbol, B> | Map<A, B>): Record<string | number | symbol, B> | Map<A, B> {
     return reduceWithValueKey(
-      (accumulated: RecordType<A, B>) =>
+      (accumulated: Record<string | number | symbol, B> | Map<A, B>) =>
         (current: B) =>
-          (key: A): RecordType<A, B> => {
+          (key: A): Record<string | number | symbol, B> | Map<A, B> => {
             if (target === key) {
               return accumulated;
             }

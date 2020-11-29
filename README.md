@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> A => RecordType<A, B> => RecordType<A, B>
+> A => Record<string | number | symbol, B> | Map<A, B> => Record<string | number | symbol, B> | Map<A, B>
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
 
